@@ -185,7 +185,7 @@
 </head>
 <body>
 
-  <div class="cart-btn" onclick="openCart()">🛒 Cart (<span id="cartCount">0</span>)</div>
+  
 
   <!-- ===== Header ===== -->
   <header>
@@ -204,9 +204,7 @@
   <div class="hero">
     <h2>Every Stone Tells a Story of Strength</h2>
     <p>100% of proceeds from our rose quartz products support breast cancer nonprofits.</p>
-  <a href="PASTE_TEST_STRIPE_LINK_HERE" class="btn" target="_blank">
-  Donate $20
-</a>
+    <a href="#products" class="btn">Shop for a Cause</a>
   </div>
 
   <!-- ===== About Section ===== -->
@@ -220,35 +218,21 @@
     </div>
   </section>
 
-  <!-- ===== Products Section ===== -->
+    <!-- ===== Products Section ===== -->
   <section id="products">
     <div class="products">
-      <h2>Shop Rose Quartz</h2>
-      <p>Each purchase directly supports breast cancer awareness.</p>
+      <h2>Rose Quartz for a Cure</h2>
+      <p>Purchase one rose quartz stone to support breast cancer awareness and research. Each purchase represents one donation.</p>
 
       <div class="products-grid">
         <div class="product-card">
-          <img src="https://via.placeholder.com/300x200" alt="Rose Quartz Bracelet" />
-          <h3>Rose Quartz Bracelet</h3>
+          <img src="https://via.placeholder.com/300x200" alt="Rose Quartz Stone" />
+          <h3>Rose Quartz Stone</h3>
           <p>$20 Donation</p>
-          <a href="#" class="btn">Add to Cart</a>
-          <script>addItem && addItem</script></a>
-        </div>
+<a href="https://buy.stripe.com/test_abc123" class="btn" target="_blank">
+  Donate $20
+</a>
 
-        <div class="product-card">
-          <img src="https://via.placeholder.com/300x200" alt="Rose Quartz Necklace" />
-          <h3>Rose Quartz Necklace</h3>
-          <p>$25 Donation</p>
-          <a href="#" class="btn">Add to Cart</a>
-          <script>addItem && addItem</script></a>
-        </div>
-
-        <div class="product-card">
-          <img src="https://via.placeholder.com/300x200" alt="Rose Quartz Crystal" />
-          <h3>Healing Crystal</h3>
-          <p>$15 Donation</p>
-          <a href="#" class="btn">Add to Cart</a>
-          <script>addItem && addItem</script></a>
         </div>
       </div>
     </div>
@@ -268,53 +252,11 @@
     <p>© 2026 Rose Quartz for a Cure | Nonprofit Organization</p>
     </footer>
 
-  <!-- ===== Cart Modal ===== -->
-  <div class="cart-modal" id="cartModal">
-    <div class="cart-content">
-      <h2>Your Cart</h2>
-      <div id="cartItems"></div>
-      <p><strong>Total: $<span id="cartTotal">0</span></strong></p>
-      <button class="close-cart" onclick="checkout()">Checkout (Demo)</button>
-      <button class="close-cart" onclick="closeCart()">Close</button>
-    </div>
-  </div>
-
-  <script>
-    let cart = [];
-
-    function addToCart(name, price) {
-      cart.push({ name, price });
-      document.getElementById('cartCount').innerText = cart.length;
-    }
-
-    function openCart() {
-      const modal = document.getElementById('cartModal');
-      const itemsDiv = document.getElementById('cartItems');
-      const totalSpan = document.getElementById('cartTotal');
-
-      itemsDiv.innerHTML = '';
-      let total = 0;
-
-      cart.forEach(item => {
-        total += item.price;
-        itemsDiv.innerHTML += `<div class="cart-item"><span>${item.name}</span><span>$${item.price}</span></div>`;
-      });
-
-      totalSpan.innerText = total;
-      modal.style.display = 'flex';
-    }
-
-    function closeCart() {
-      document.getElementById('cartModal').style.display = 'none';
-    }
-
-    function checkout() {
-      alert('This is a demo checkout. You can connect Stripe or PayPal next!');
-    }
-  </script>
+  
 
 </body>
 </html>
 
 </body>
 </html>
+
